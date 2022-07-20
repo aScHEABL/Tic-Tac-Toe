@@ -69,7 +69,10 @@ body main {
 body > main #game-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 100%;
+    width: 500px;
+    height: 500px;
+    padding: 16px 16px 16px 16px;
+    margin: auto;
 }
 
 body > main > #game-container  #first-column {
@@ -81,6 +84,7 @@ body > main > #game-container > #first-column .grid {
     border-width: 0px 0px 6px 6px;
     border-color: var(--color-zinc-200);
     border-style: solid;
+    cursor: pointer;
 }
 
 body > main > #game-container > #first-column #grid-1 {
@@ -98,6 +102,7 @@ body > main > #game-container > #second-column .grid {
     border-width: 0px 6px 6px 6px;
     border-color: var(--color-zinc-200);
     border-style: solid;
+    cursor: pointer;
 }
 
 body > main > #game-container > #second-column #grid-4 {
@@ -115,10 +120,23 @@ body > main > #game-container > #third-column .grid {
     border-width: 0px 6px 6px 0px;
     border-color: var(--color-zinc-200);
     border-style: solid;
+    cursor: pointer;
 }
 
 body > main > #game-container > #third-column #grid-7 {
     border-width: 6px 6px 6px 0px;
     border-color: var(--color-zinc-200);
     border-style: solid;
+}
+
+body > main #restart-button {
+    position: relative;
+    left: 40%;
+    top: 5%;
+    background-color: var(--chartreuse);
+    font-size: 36px;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 32px 8px 32px;
+    cursor: pointer;
 }
