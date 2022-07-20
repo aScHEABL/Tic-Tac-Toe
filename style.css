@@ -87,7 +87,7 @@ body > main > #game-container > #first-column .grid {
     cursor: pointer;
 }
 
-body > main > #game-container > #first-column #grid-1 {
+body > main > #game-container > #first-column #grid-0 {
     border-width: 6px 0px 6px 6px;
     border-color: var(--color-zinc-200);
     border-style: solid;
@@ -105,7 +105,7 @@ body > main > #game-container > #second-column .grid {
     cursor: pointer;
 }
 
-body > main > #game-container > #second-column #grid-4 {
+body > main > #game-container > #second-column #grid-3 {
     border-width: 6px 6px 6px 6px;
     border-color: var(--color-zinc-200);
     border-style: solid;
@@ -123,7 +123,7 @@ body > main > #game-container > #third-column .grid {
     cursor: pointer;
 }
 
-body > main > #game-container > #third-column #grid-7 {
+body > main > #game-container > #third-column #grid-6 {
     border-width: 6px 6px 6px 0px;
     border-color: var(--color-zinc-200);
     border-style: solid;
