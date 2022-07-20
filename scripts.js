@@ -19,9 +19,21 @@
         })
     });
 
+    let 
+
     let playerX = {};
     let playerO = {};
     let gameLogic = () => {
 
     }
 })();
+
+// (function () {
+//     console.log(`Hello World!`);
+//     // target DOM elements
+//     let targetDOM = () => {
+//         const restartButton_DOM = () =>  document.querySelector(`#restart-button`);
+//         return { restartButton_DOM };
+//     }
+//     console.log(targetDOM().restartButton_DOM());
+// })();
