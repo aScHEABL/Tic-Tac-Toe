@@ -2,7 +2,7 @@
 
 This is the Tic-Tac-Toe project from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe) <br>
 
-[Live Demo]() 👈 <br>
+[Live Demo](https://ascheabl.github.io/Tic-Tac-Toe/) 👈 <br>
 
 ### Built with <br>
 
