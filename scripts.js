@@ -10,12 +10,26 @@
     //     return {count, index}
     // };
 
+    let playerX = {};
+    let playerO = {};
+
+    let count = 0;
     const cyclePlayerTurn = () => {
-        const turnArray = [];
-        let count = 0;
+        const turnArray = ["X", "O"];
         return () => {
-            let index = count % turnArray.length;
+            let turn = count % turnArray.length;
             count++;
+            return turn;
+        };
+    };
+
+    // game logic
+    
+    let gameLogic = (grid, index) => {
+        // get the turn of function cyclePlayerTurn
+        switch (cyclePlayerTurn()()) {
+            // playerX's turn
+            case 0:
 
         }
     }
@@ -36,19 +50,16 @@
     // addEventListener
 
     let addEventListener = (() => {
-        targetDOM().restartButton_DOM.addEventListener(`click`, () => {
-            console.log(`Restart button has been clicked!`);
-        })
-        targetDOM().grids_DOM.forEach((grid, index) => {
+        let eventListenerCallBack = (grid, index) => {
             grid.addEventListener(`click`, () => {
                 console.log(`${targetDOM().gridArray[index]} has been clicked!`);
             });
-        });
+        };
+        targetDOM().restartButton_DOM.addEventListener(`click`, () => {
+            console.log(`Restart button has been clicked!`);
+        })
+        targetDOM().grids_DOM.forEach(eventListenerCallBack);
+
     })();
     
-    let playerX = {};
-    let playerO = {};
-    let gameLogic = () => {
-
-    }
 })();
