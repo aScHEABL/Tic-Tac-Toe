@@ -52,11 +52,11 @@ body > header .h2-title {
     padding: 8px 0px 8px 0px;
 }
 
-body > header #player-x {
+body > header #player-x-title {
     display: block;
 }
 
-body > header #player-o {
+body > header #player-o-title {
     display: none;
 }
 
