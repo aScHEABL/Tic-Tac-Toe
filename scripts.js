@@ -1,5 +1,25 @@
 (function () {
     console.log(`Hello World!`);
+
+    // cycle player's turn
+
+    // const cyclePlayerTurn = () => {
+    //     const turnArray = ["X", "O"];
+    //     let count = 0;
+    //     let index = count % turnArray.length;
+    //     return {count, index}
+    // };
+
+    const cyclePlayerTurn = () => {
+        const turnArray = [];
+        let count = 0;
+        return () => {
+            let index = count % turnArray.length;
+            count++;
+
+        }
+    }
+
     // target DOM elements
 
     let targetDOM = () => {
@@ -12,6 +32,7 @@
         const grids_DOM = gridArray.map((grid) => document.querySelector(`#${grid}`));
         return {restartButton_DOM, grids_DOM, gridArray};
     };
+
     // addEventListener
 
     let addEventListener = (() => {
@@ -24,26 +45,10 @@
             });
         });
     })();
-
-    // let cyclePlayerTurn = () => {
-    //     const turnArray = ["X", "O"];
-    //     let count = 0;
-
-    // };
-
+    
     let playerX = {};
     let playerO = {};
     let gameLogic = () => {
 
     }
 })();
-
-// (function () {
-//     console.log(`Hello World!`);
-//     // target DOM elements
-//     let targetDOM = () => {
-//         const restartButton_DOM = () =>  document.querySelector(`#restart-button`);
-//         return { restartButton_DOM };
-//     }
-//     console.log(targetDOM().restartButton_DOM());
-// })();
