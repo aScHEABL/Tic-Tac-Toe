@@ -85,7 +85,7 @@ body > main > #game-container > #first-column .grid {
     border-color: var(--color-zinc-200);
     border-style: solid;
     cursor: pointer;
-    font-size: 70px;
+    font-size: 55px;
     color: var(--color-turquoise);
     text-align: center;
     line-height: 156px;
@@ -107,7 +107,7 @@ body > main > #game-container > #second-column .grid {
     border-color: var(--color-zinc-200);
     border-style: solid;
     cursor: pointer;
-    font-size: 70px;
+    font-size: 55px;
     color: var(--color-turquoise);
     text-align: center;
     line-height: 156px;
