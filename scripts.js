@@ -3,13 +3,6 @@
 
     // cycle player's turn
 
-    // const cyclePlayerTurn = () => {
-    //     const turnArray = ["X", "O"];
-    //     let count = 0;
-    //     let index = count % turnArray.length;
-    //     return {count, index}
-    // };
-
     let playerX = {};
     let playerO = {};
 
@@ -30,9 +23,15 @@
         switch (cyclePlayerTurn()()) {
             // playerX's turn
             case 0:
-
-        }
-    }
+                grid.textContent = `X`;
+                console.log(`Player X's turn!`);
+                break;
+            case 1:
+                grid.textContent = `O`;
+                console.log(`Player O's turn!`);
+                break;
+        };
+    };
 
     // target DOM elements
 
@@ -53,13 +52,14 @@
         let eventListenerCallBack = (grid, index) => {
             grid.addEventListener(`click`, () => {
                 console.log(`${targetDOM().gridArray[index]} has been clicked!`);
+                gameLogic(grid, index);
             });
         };
         targetDOM().restartButton_DOM.addEventListener(`click`, () => {
             console.log(`Restart button has been clicked!`);
         })
         targetDOM().grids_DOM.forEach(eventListenerCallBack);
-
+        
     })();
     
 })();
