@@ -60,6 +60,10 @@
         let eventListenerCallBack = (grid, index) => {
             grid.addEventListener(`click`, () => {
                 console.log(`${targetDOM().gridArray[index]} has been clicked!`);
+                if (grid.textContent !== "") {
+                    console.log(`${targetDOM().gridArray[index]} has been clicked twice! Rejected.`);
+                    return;
+                }
                 gameLogic(grid, index);
             });
         };
