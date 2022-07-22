@@ -3,17 +3,15 @@
 
     // cycle player's turn
 
-    let playerX = {};
-    let playerO = {};
+    let playerX = [];
+    let playerO = [];
 
     let count = 0;
     const cyclePlayerTurn = () => {
         const turnArray = ["X", "O"];
-        return () => {
-            let turn = count % turnArray.length;
-            count++;
-            return turn;
-        };
+        let turn = count % turnArray.length;
+        count++;
+        return turn;
     };
 
     // game logic
@@ -22,17 +20,21 @@
 
 
         // get the turn of function cyclePlayerTurn
-        switch (cyclePlayerTurn()()) {
+        switch (cyclePlayerTurn()) {
             // playerX's turn
             case 0:
                 grid.textContent = `X`;
-                console.log(`Player X's turn!`);
+                playerX.push(index);
+                console.log(`Player X's array: ${playerX}`);
+                // console.log(`Player X's turn!`);
                 targetDOM().playerXTitle.style.display = `block`;
                 targetDOM().playerOTitle.style.display = `none`;
                 break;
             case 1:
                 grid.textContent = `O`;
-                console.log(`Player O's turn!`);
+                playerO.push(index);
+                console.log(`Player O's array: ${playerO}`);
+                // console.log(`Player O's turn!`);
                 targetDOM().playerXTitle.style.display = `none`;
                 targetDOM().playerOTitle.style.display = `block`;
                 break;
@@ -60,10 +62,11 @@
         let eventListenerCallBack = (grid, index) => {
             grid.addEventListener(`click`, () => {
                 console.log(`${targetDOM().gridArray[index]} has been clicked!`);
+                // if  player clicked the same grid again, exit the function
                 if (grid.textContent !== "") {
                     console.log(`${targetDOM().gridArray[index]} has been clicked twice! Rejected.`);
                     return;
-                }
+                };
                 gameLogic(grid, index);
             });
         };
