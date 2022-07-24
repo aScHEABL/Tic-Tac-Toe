@@ -18,22 +18,22 @@
     
     const gameLogic = (grid, index) => {    
         const sortCallBackFn = (a, b) => a - b;
-        // Win scenario
-        // const win0 = [0, 1, 2];
-        // const win1 = [3, 4, 5];
-        // const win2 = [6, 7, 8];
-        // const win3 = [0, 3, 6];
-        // const win4 = [1, 4, 7];
-        // const win5 = [2, 5 ,8];
-        // const win6 = [0, 4, 8];
-        // const win7 = [6, 4, 2];
-        const win = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [6, 4, 2]];
-
-        win.forEach((winScenario) => {
-            if (playerX.includes(winScenario) === true) console.log(`Player X won!`);
-            if (playerO.includes(winScenario) === true) console.log(`Player O won!`);
-        });
-
+        const checkWinner = () => {
+            const winCondition = [
+                [0, 1, 2], 
+                [3, 4, 5], 
+                [6, 7, 8], 
+                [0, 3, 6], 
+                [1, 4, 7], 
+                [2, 5, 8], 
+                [0, 4, 8], 
+                [6, 4, 2]
+            ];
+            winCondition.forEach((condition) => {
+                const match = playerX.some((matchedCondition) => condition.includes(matchedCondition));
+                console.log(match);
+            });
+        };
         // get the turn of function cyclePlayerTurn
         switch (cyclePlayerTurn()) {
             // playerX's turn
