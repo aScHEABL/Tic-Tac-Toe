@@ -1,0 +1,20 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.game-board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board .cell {
+    width: 100px;
+    height: 100px;
+}
