@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * 0.9);
+}
+
 body {
     margin: 0;
 }
@@ -11,10 +16,37 @@ body {
     height: 100vh;
     display: grid;
     justify-content: center;
+    justify-items: center;
+    align-content: center;
     align-items: center;
+    background-color: black;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 5px;
 }
 
 .game-board .cell {
-    width: 100px;
-    height: 100px;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell.x::before,
+.cell.x::after {
+    content: "";
+    position: absolute;
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    background-color: black;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
 }
